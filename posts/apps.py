@@ -1,6 +1,6 @@
-from django.urls import path
-from .views import PostListView  # Import your view
+from django.apps import AppConfig
 
-urlpatterns = [
-    path('', PostListView.as_view(), name='post-list'),
-]
+
+class PostsConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'posts'
